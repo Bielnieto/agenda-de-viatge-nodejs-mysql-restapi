@@ -9,6 +9,15 @@ CREATE TABLE employee (
   PRIMARY KEY(id)
 );
 
+CREATE TABLE clients (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(100) NOT NULL,
+  email VARCHAR(100) UNIQUE NOT NULL,
+  phone VARCHAR(20),
+  address VARCHAR(255),
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
 DESCRIBE employee;
 
 INSERT INTO employee values 
