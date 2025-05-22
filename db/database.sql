@@ -11,10 +11,11 @@ CREATE TABLE employee (
 
 CREATE TABLE clients (
   id INT AUTO_INCREMENT PRIMARY KEY,
-  name VARCHAR(100) NOT NULL,
-  email VARCHAR(100) UNIQUE NOT NULL,
-  phone VARCHAR(20),
-  address VARCHAR(255),
+  nom VARCHAR(100) NOT NULL,
+  cognoms VARCHAR(150) NOT NULL,
+  telefon VARCHAR(20),
+  correu_electronic VARCHAR(100) UNIQUE NOT NULL,
+  desti_viatge VARCHAR(100),
   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
@@ -26,3 +27,9 @@ INSERT INTO employee values
   (3, 'John Carter', 50000);
 
 SELECT * FROM employee;
+
+INSERT INTO clients (nom, cognoms, telefon, correu_electronic, desti_viatge)
+VALUES
+  ('Anna', 'Serra Puig', '600123456', 'anna.serra@example.com', 'Roma'),
+  ('Marc', 'Vila Soler', '600654321', 'marc.vila@example.com', 'París'),
+  ('Laura', 'Ribas Font', '600987654', 'laura.ribas@example.com', 'Londres');
