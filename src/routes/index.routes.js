@@ -7,4 +7,6 @@ router.get("/", index);
 
 router.get("/ping", ping);
 
+router.get("/clients", ping);
+
 export default router;
